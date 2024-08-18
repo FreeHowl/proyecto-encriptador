@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    color: #0A3871;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 1% 2%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 10px;
+}
+
+.presentacion{
+    align-items: center;
+    display: flex;
+    padding: 1% 10%;
+}
+
+.container__formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

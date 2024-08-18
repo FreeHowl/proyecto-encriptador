@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecriptador de texto</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <textarea>Ingrese el texto aquí</textarea>
+    <header class="header">
+        <nav class="header__menu">
+            <!--header con boton de alura para ir al home-->
+            <a href="index.html">
+                <img src="assets/logo-alura.png">
+            </a>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <form class="container__formulario">
+            <!--formulario para escribir el texto-->
+            <textarea name="mensaje" autocapitalize="none" class="container__texto" rows="30" cols="70">Ingrese el texto aquí</textarea>
+            <div class="container__botones">
+                <button onclick="encriptar();" class="container__boton">Encriptar</button>
+                <button onclick="desencriptar();" class="container__boton">Desncriptar</button>         
+            </div>
+        </form>
+        <div class="container__texto__mostrado">
+            <!--contenedor para mostrar el texto-->
+            <p id="textoMostrado"></p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Andrés</p>
+    </footer>    
 </body>
 </html>
