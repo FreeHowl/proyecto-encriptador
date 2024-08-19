@@ -1,23 +1,23 @@
 function encriptar(){
     var texto = document.getElementById("campoTexto").value;
-    var separado = texto.split('')
+    var encriptado = texto.replace(/(a|e|i|o|u)/g, function(match){
+        if (match === "a") return "ai";
+        if (match === "e") return "enter";
+        if (match === "i") return "imes";
+        if (match === "o") return "ober";
+        if (match === "u") return "ufta";
+    });
+    document.getElementById("elTexto").innerText = encriptado;
+}
 
-    for (let i = 0; i < separado.length + 1; i++){
-        if (separado[i]=="a"){
-            separado[i] = "ai";
-        }else if (separado[i]=="e"){
-            separado[i] = "enter";
-        }else if (separado[i]=="i"){
-            separado[i] = "imes";
-        }else if (separado[i]=="o"){
-            separado[i] = "ober";
-        }else if (separado[i]=="u"){
-            separado[i] = "ufat"
-        }
-   }
-   var resultado = separado.toString();
-   var sinComas = resultado.split(",");
-   var junto = sinComas.join("");
-    console.log(junto);
-    document.getElementById("elTexto").innerText = junto;
+function desencriptar(){
+    var texto = document.getElementById("campoTexto").value;
+    var desencriptado = texto.replace(/(ai|enter|imes|ober|ufta)/g, function(match){
+        if (match === "ai") return "a";
+        if (match === "enter") return "e";
+        if (match === "imes") return "i";
+        if (match === "ober") return "o";
+        if (match === "ufta") return "u";
+    });
+    document.getElementById("elTexto").innerText = desencriptado;
 }
