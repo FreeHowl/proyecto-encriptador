@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +7,27 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="header">
-        
-    </header>
+    <header></header>
     <main class="presentacion">
         <nav class="header__menu">
             <!--header con boton de alura para ir al home-->
             <a href="index.html">
-                <img src="assets/logo-alura.png">
+                <img src="assets/logo-alura.png" alt="Logo de alura">
             </a>
         </nav>
-        <form class="container__formulario">
+        <form name="campoTexto" class="container__formulario">
             <!--formulario para escribir el texto-->
-            <textarea id="campoTexto" cols="10" rows="10" placeholder="Ingrese texto aquí" class="mi__formulario"></textarea>
+            <textarea type="text" id="campoTexto" name="campoTexto" cols="10" rows="10" class="mi__formulario"></textarea>
             <label for="campoTexto" class="pie__formulario">Solo minusculas y sin acentos</label>
             <div class="container__botones">
-                <button type="submit" onclick="encriptar();" class="container__boton__encriptar">Encriptar</button>
-                <button type="submit" onclick="desencriptar();" class="container__boton__desencriptar">Desencriptar</button>         
+                <button type="button" onclick="encriptar()" class="container__boton__encriptar">Encriptar</button>
+                <button type="button" onclick="desencriptar()" class="container__boton__desencriptar">Desencriptar</button>         
             </div>
         </form>
         <div class="container__texto__mostrado" id="elTexto">
             <!--contenedor para mostrar el texto-->
-            <p id="textoMostrado"></p>
             <section id="elTexto">
-                <img class="presentacion__imagen" src="assets/Muñeco.png">
+                <img class="presentacion__imagen" src="assets/Muñeco.png" alt="">
                 <h2 class="container__texto">Ningún mensaje fue encontrado </h2>
                 <p>Ingrese el texto que desee encriptar o desencriptar</p>
             </section>
@@ -39,6 +36,6 @@
     <footer class="footer">
         <p>Desarrollado por Andrés</p>
     </footer> 
-    <script href="encriptar.js" defer></script>   
+    <script src="encriptar.js"></script>
 </body>
 </html>

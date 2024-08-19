@@ -66,22 +66,13 @@ body{
     padding: 10% 1% 5% 1%;
     border-radius: 32px;
     border-style: hidden;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     font-family: var(--fuente-inter);
     font-size: 16px;
     text-decoration: none;
     color: gray;
     display: flex;
     flex-direction: column;
-}
-
-.texto__default{
-    display: flex;
-    text-align: center;
-    font-family: var(--fuente-inter);
-    font-size: 24px;
-    font-weight: bold;
-    color:black;
 }
 
 .presentacion__imagen{
@@ -123,4 +114,10 @@ body{
     border: 2px solid ;
     justify-content: center;
     gap: 10px;
+}
+
+.footer{
+    font-family: var(--fuente-inter);
+    font-size: 12px;
+    color: gray;
 }
