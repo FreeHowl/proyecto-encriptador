@@ -1,0 +1,44 @@
+git config --list: me da los usuarios que hay
+git clone enlace: me clona en la carpeta que estoy, el repositorio del enlace. tambien git clone <repositorio> <mi-proyecto-clone>
+git clone -branch new_feature <repositorio> para clonar el repositorio desde una rama especifica
+ls para listar los elementos dentro de la carpeta
+cd para navegar
+cd .. para ir hacia arriba
+git log para ver los cambios hechos en el repo
+git log --oneline lo mismo pero en una linea mas ordenado, con el codigo del commit
+git log -p lo mismo pero con mas información
+git log --autthon=2user_name" información de la persona autora del commit
+git log --since=1.month.ago --until=1.day.ago información por fecha
+
+code. abre el editor en la carpeta del proyecto
+git pull dice si el clone esta al dia con el repositorio remoto y si no baja todos los archivos que faltan 
+git status verifica el estado del proyecto
+git add <nombre del archivo> añade un archivo que esta local pero no en el remoto
+git add. cuando es todo lo que hay que subir
+git commit -m "descripcion" añade el commit (puedo añadir un punto entre commit y -m para que el commit haga parte de todo el ptroyecto)
+git push sube el archivo al remoto
+
+Las modificaciónes que se han realizado se pueden ver de forma visual, dando clic en el commit 
+Apareciendo en rojo lo que se haya borrado y en verde lo que se haya agregado. Se llama Git Diff
+Del mismo modo el comgando "git diff <archivo>" en la consola, muestra con los colores, los cambios realizados
+
+git restore --source <archivo> <codigo de commit> restaura el archivo al estado de cuando se realizó el commit
+
+git branch muestra las ramas que hay (el * indica en que rama estoy)
+git checkout -b git branch <nombre de la rama> crea una rama y me lleva a ella
+git branch <nombre de la rama> lo mismo pero no me lleva a ella
+git switch <nombre de la rama> me lleva a la rama
+
+Para combinar ramas, voy a la rama main y 
+git merge <nombre de la rama modificada>
+luego
+git push origin main
+
+Cuando inicio nuevo repositorio, creo una carpeta en el pc y abro el git bash ahí, luego abro la carpeta en VsCode y
+trabajo, luego hago algun cambio y entonces voy a la pagina del repositorio y copio la dirección del repo que empieza con
+comando git y la pego en git bash
+git remote -v me indica que ya estoy conectado
+Sin embargo la rama principal se llama master y no main entonces copio el siguiente comando que es git branch -M main
+y lo pego en git bash y lo mismo con el ultimo ocmando que incluye -u 
+
+

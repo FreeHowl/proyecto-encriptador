@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        
+    </header>
     <main class="presentacion">
         <nav class="header__menu">
             <!--header con boton de alura para ir al home-->
@@ -15,22 +17,27 @@
                 <img src="assets/logo-alura.png" alt="Logo de alura">
             </a>
         </nav>
-        <form name="campoTexto" class="container__formulario">
+        <div name="campoTexto" class="container__formulario">
             <!--formulario para escribir el texto-->
-            <textarea type="text" id="campoTexto" name="campoTexto" cols="10" rows="10" class="mi__formulario" placeholder="Escriba su texto aquí"></textarea>
-            <label for="campoTexto" class="pie__formulario">Solo minusculas y sin acentos</label>
+            <textarea type="text" id="campoTexto" name="campoTexto" cols="35" rows="10" class="mi__formulario" placeholder="Ingrese el texto aquí"></textarea>
+            <label for="campoTexto" class="pie__formulario"><img src="/assets/bi_exclamation-circle-fill.png" alt="signo de exclamación"> Solo minusculas y sin acentos</label>
+                
             <div class="container__botones">
                 <button type="button" onclick="encriptar()" class="container__boton__encriptar">Encriptar</button>
                 <button type="button" onclick="desencriptar()" class="container__boton__desencriptar">Desencriptar</button>         
             </div>
-        </form>
-        <div class="container__texto__mostrado" id="elTexto">
+        </div>
+        <div class="container__texto__mostrado">
             <!--contenedor para mostrar el texto-->
-            <section id="elTexto">
+            <section id="elTexto" class="medio">
                 <img class="presentacion__imagen" src="assets/Muñeco.png" alt="">
                 <h2 class="container__texto">Ningún mensaje fue encontrado </h2>
-                <p>Ingrese el texto que desee encriptar o desencriptar</p>
+                <p>Ingrese el texto que desee encriptar o desencriptar</p>         
             </section>
+            <!--Boton de copiar-->
+            <div id="contenedorCopiar" class="contenedorCopiar">
+                <button type="button" id="botonCopiar" onclick="copiar()" class="container__boton__copiar">Copiar</button>
+            </div>
         </div>
     </main>
     <footer class="footer">

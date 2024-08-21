@@ -21,21 +21,23 @@ body{
 }
 
 .presentacion{
-    justify-content:space-around;
+    justify-content:center;
     display: flex;
     padding: 2% 5% 0% 0%; 
+    gap: 24px;
 }
 
 .container__formulario{
-    width: 30%;
     display: flex;
-    justify-content: space-between;
+    padding: 5% 0% 0% 0%;
     flex-direction: column;
-    padding: 8% 20% 2% 1%;
+}
+
+textarea::placeholder{
+    color:#0A3871;
 }
 
 .mi__formulario{
-    width: 150%;
     resize: none;
     border:hidden;
     background: none;
@@ -48,6 +50,7 @@ body{
     font-family: var(--fuente-inter);
     font-size: 12px;
     color: gray;
+    padding-bottom: 1%;
 }
 
 .container__texto{
@@ -55,13 +58,12 @@ body{
     border:hidden;
     font-family: var(--fuente-inter);
     font-size: 24px;
-    font-weight: bold;
     text-align: center;
     color:#000000;
 }
 
 .container__texto__mostrado{
-    width: 30%;
+    width: 400px;
     background-color: white;
     align-items: center;
     text-align: center;
@@ -72,9 +74,10 @@ body{
     font-family: var(--fuente-inter);
     font-size: 16px;
     text-decoration: none;
-    color: gray;
+    color: #495057;
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
 
 .presentacion__imagen{
@@ -82,13 +85,14 @@ body{
 }
 
 .container__botones{
-    display: flex;
-    justify-content:center;
+    display:flex;
+    align-items: center;
     gap: 24px;
+    margin-top: auto;
 }
 
 .container__boton__encriptar{
-    width: 100%;
+    width: 20.5em;
     text-align: center;
     background: #0A3871;
     padding: 24px;
@@ -98,13 +102,13 @@ body{
     text-decoration: none;
     color: whitesmoke;
     border-style:hidden ;
-    justify-content: center;
-    gap: 10px;
+    cursor: pointer;
 }
 
 .container__boton__desencriptar{
-    width: 100%;
+    width: 20.5em;
     text-align: center;
+    background-color: #D8DFE8;
     padding: 24px;
     border-radius: 24px;
     font-family: var(--fuente-inter);
@@ -112,12 +116,76 @@ body{
     text-decoration: none;
     color: #0A3871;
     border: 2px solid ;
+    cursor: pointer;
+    gap: 24px;
+}
+
+.medio{
+    display: flex;
     justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.contenedorCopiar{
+    margin-top: auto;
+}
+
+.container__boton__copiar{
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    width: 21em;
+    padding: 24px;
+    border-radius: 24px;
+    justify-content: center;
+    align-items: flex-end;
+    color: #0A3871;
+    background-color: white;
+    display: none;
+    cursor: pointer;
 }
 
 .footer{
+    display: flex;
     font-family: var(--fuente-inter);
     font-size: 12px;
     color: gray;
+    padding: 2% 2%;
+}
+
+@media(max-width: 1000px){
+    .presentacion{
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .presentacion__imagen{
+        display: none;
+    }
+
+    .container__texto__mostrado{
+        width: auto;
+        padding-right: 1%;
+    }
+}
+
+@media(max-width: 700px){
+    .presentacion{
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .presentacion__imagen{
+        display: none;
+    }
+
+    .container__texto__mostrado{
+        width: auto;
+        padding-right: 1%;
+    }
+
+    .container__botones{
+        flex-direction: column;
+    }
 }
